@@ -1,0 +1,27 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class kth_max_min {
+    public  static int  KtSmallest(int [] arr,int k)
+{
+    Arrays.sort(arr);
+    return arr[k-1];
+}
+	public static void main (String[] args) {
+	    
+		Scanner kb = new Scanner(System.in);
+		int test = kb.nextInt();
+		for(int j =0;j<test;j++)
+		{
+		    int n = kb.nextInt();
+		    
+		    int []arr= new int[n];
+		    for(int i = 0 ;i<n;i++)
+		    arr[i] = kb.nextInt();
+		    int k =kb.nextInt();
+		     int  a= KtSmallest( arr, k);
+		    System.out.println(a);
+		}
+	}
+}
